@@ -2,6 +2,8 @@ package com.emramirez.restaurantfusion.menu;
 
 import com.emramirez.restaurantfusion.model.MenuItem;
 
+import java.util.Iterator;
+
 public class DinerMenuIterator implements Iterator {
     private MenuItem[] menuItems;
     private int position = 0;

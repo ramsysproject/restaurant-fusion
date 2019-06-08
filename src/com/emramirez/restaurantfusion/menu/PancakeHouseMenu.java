@@ -3,8 +3,9 @@ package com.emramirez.restaurantfusion.menu;
 import com.emramirez.restaurantfusion.model.MenuItem;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
-public class PancakeHouseMenu {
+public class PancakeHouseMenu implements Menu {
     private ArrayList<MenuItem> menuItems;
 
     public PancakeHouseMenu() {
@@ -33,6 +34,6 @@ public class PancakeHouseMenu {
     }
 
     public Iterator createIterator() {
-        return new PancakeHouseMenuIterator(menuItems);
+        return menuItems.iterator();
     }
 }

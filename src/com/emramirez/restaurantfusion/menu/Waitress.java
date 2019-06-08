@@ -2,18 +2,20 @@ package com.emramirez.restaurantfusion.menu;
 
 import com.emramirez.restaurantfusion.model.MenuItem;
 
-public class Waitress {
-    private PancakeHouseMenu pancakeHouseMenu;
-    private DinerMenu dinerMenu;
+import java.util.Iterator;
 
-    public Waitress(PancakeHouseMenu pancakeHouseMenu, DinerMenu dinerMenu) {
+public class Waitress {
+    private Menu pancakeHouseMenu;
+    private Menu dinerMenu;
+
+    public Waitress(Menu pancakeHouseMenu, Menu dinerMenu) {
         this.pancakeHouseMenu = pancakeHouseMenu;
         this.dinerMenu = dinerMenu;
     }
 
     public void printMenu() {
-        Iterator pancakeIterator = pancakeHouseMenu.createIterator();
-        Iterator dinerIterator = dinerMenu.createIterator();
+        Iterator<MenuItem> pancakeIterator = pancakeHouseMenu.createIterator();
+        Iterator<MenuItem> dinerIterator = dinerMenu.createIterator();
 
         System.out.println("MENU\n----\nBREAKFAST");
         printMenu(pancakeIterator);

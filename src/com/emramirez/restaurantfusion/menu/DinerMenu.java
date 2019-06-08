@@ -2,7 +2,9 @@ package com.emramirez.restaurantfusion.menu;
 
 import com.emramirez.restaurantfusion.model.MenuItem;
 
-public class DinerMenu {
+import java.util.Iterator;
+
+public class DinerMenu implements Menu {
     private static final int MAX_ITEMS = 6;
     private int numberOfItems = 0;
     private MenuItem[] menuItems;
